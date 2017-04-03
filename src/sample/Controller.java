@@ -69,6 +69,7 @@ public class Controller implements Initializable {
 
     public void excute(ActionEvent event){
         try {
+            console.setText("");
             final WebEngine webEngine = webView.getEngine();
             String script = editor.getText();
             webEngine.executeScript(script);
