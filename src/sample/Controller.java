@@ -41,7 +41,6 @@ public class Controller implements Initializable {
         final WebEngine webEngine = webView.getEngine();
         String text = url.getText();
         webEngine.load(normalize(text));
-
         webEngine.documentProperty().addListener(new ChangeListener<Document>() {
             @Override public void changed(ObservableValue<? extends Document> observableValue, Document document, Document newDoc) {
                 if (newDoc != null) {
@@ -96,6 +95,8 @@ public class Controller implements Initializable {
             }
         });
         loadUrl();
+        editor.setText("document.getElementById('kw').value='soso';\n" +
+                "document.getElementById('form').submit();");
     }
 
     private void printError(Throwable throwable){

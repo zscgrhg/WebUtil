@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.web.WebView?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="789.0"
-            prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="789.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.111"
             fx:controller="sample.Controller">
     <top>
         <HBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
             <children>
-                <TextField prefHeight="30.0" prefWidth="1031.0" fx:id="url" text="http://127.0.0.1:8080/index.html"
+                <TextField prefHeight="30.0" prefWidth="1031.0" fx:id="url" text="http://www.baidu.com"
                            onKeyPressed="#onEnterKey"/>
                 <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" text="open" fx:id="open"
                         onAction="#load"/>
