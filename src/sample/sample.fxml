@@ -39,7 +39,7 @@
                             <buttons>
                                 <Button mnemonicParsing="false" text="excute" fx:id="excute" onAction="#excute"
                                         disable="true"/>
-                                <Button mnemonicParsing="false" text="reload" fx:id="reload" onAction="#loadUrl"/>
+                                <Button mnemonicParsing="false" text="reload" fx:id="reload" onAction="#reload"/>
                             </buttons>
                         </ButtonBar>
                     </bottom>

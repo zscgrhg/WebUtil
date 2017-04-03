@@ -58,7 +58,14 @@ public class Controller implements Initializable {
             printError(e);
         }
     }
-
+    public void reload(ActionEvent event){
+        try {
+            final WebEngine webEngine = webView.getEngine();
+            webEngine.reload();
+        } catch (Exception e) {
+            printError(e);
+        }
+    }
 
 
     public void onEnterKey(javafx.scene.input.KeyEvent event){
@@ -73,6 +80,7 @@ public class Controller implements Initializable {
             final WebEngine webEngine = webView.getEngine();
             String script = editor.getText();
             webEngine.executeScript(script);
+
         } catch (Exception e) {
             printError(e);
         }
