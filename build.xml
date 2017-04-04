@@ -16,7 +16,9 @@
     </target>
     <target name="package" depends="compile">
         <jar basedir="${classes.dir}" destfile="${package.name}">
-
+            <manifest>
+                <attribute name="Main-Class" value="sample.Main"/>
+            </manifest>
         </jar>
     </target>
     <target name="test" depends="package">
