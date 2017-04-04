@@ -1,10 +1,12 @@
-.text-field, .text-area {
+
+#editor {
+    -fx-text-fill: rgb(0, 0, 255);
     -fx-font-size: 16;
     -fx-padding: 6 10 4 10;
     -fx-font-family: "Verdana";
 }
 
-#editor {
-    -fx-text-fill: rgb(0, 0, 255);
+TextArea * {
+    -fx-background-color: lightblue;
 }
 
