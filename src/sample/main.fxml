@@ -6,7 +6,7 @@
 <?import javafx.scene.web.WebView?>
 <?import java.net.URL?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity" prefHeight="789.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.111"
+            minWidth="-Infinity" prefHeight="789.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.112"
             fx:controller="sample.Controller">
     <center>
         <WebView fx:id="webView" prefHeight="370.0" prefWidth="312.0" BorderPane.alignment="CENTER"/>
@@ -48,9 +48,8 @@
                         text="open" BorderPane.alignment="CENTER"/>
             </right>
             <center>
-                <TextField fx:id="url" prefHeight="30.0" prefWidth="978.0" text="http://www.baidu.com"
-                           onKeyPressed="#onEnterKey"
-                           BorderPane.alignment="CENTER"/>
+                <TextField fx:id="url" onKeyPressed="#onEnterKey" prefHeight="30.0" prefWidth="978.0"
+                           text="http://www.baidu.com" BorderPane.alignment="CENTER"/>
             </center>
         </BorderPane>
     </top>
