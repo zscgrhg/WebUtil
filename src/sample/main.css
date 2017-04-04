@@ -1,0 +1,9 @@
+.text-field, .text-area {
+    -fx-font-size: 16;
+    -fx-padding: 6 10 4 10;
+    -fx-font-family: "Verdana";
+}
+
+.text-area {
+    -fx-padding: 6 5 6 5;
+}

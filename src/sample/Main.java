@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -16,8 +17,10 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("WebUtil");
-        Scene scene = new Scene(root, 1200, 800);
+        Scene scene = new Scene(root, 800, 400);
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("logo.png")));
         primaryStage.show();
     }
 }

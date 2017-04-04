@@ -2,40 +2,35 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
+<?import java.net.URL?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-            minWidth="-Infinity"
-            prefHeight="789.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.111"
+            minWidth="-Infinity" prefHeight="789.0" prefWidth="1139.0" xmlns="http://javafx.com/javafx/8.0.111"
             fx:controller="sample.Controller">
-    <top>
-        <HBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-            <children>
-                <TextField prefHeight="30.0" prefWidth="1031.0" fx:id="url" text="http://www.baidu.com"
-                           onKeyPressed="#onEnterKey"/>
-                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" text="open" fx:id="open"
-                        onAction="#load"/>
-            </children>
-        </HBox>
-    </top>
     <center>
-        <WebView prefHeight="370.0" prefWidth="312.0" BorderPane.alignment="CENTER" fx:id="webView"/>
+        <WebView fx:id="webView" prefHeight="370.0" prefWidth="312.0" BorderPane.alignment="CENTER"/>
     </center>
     <left>
         <BorderPane prefHeight="759.0" prefWidth="513.0" BorderPane.alignment="CENTER">
             <bottom>
-                <TextArea prefHeight="268.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="console"/>
+                <TextArea fx:id="console" prefHeight="268.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
             </bottom>
             <center>
                 <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                     <center>
-                        <TextArea prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="editor"/>
+                        <TextArea fx:id="editor" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font name="Verdana" size="15.0"/>
+                            </font>
+                        </TextArea>
                     </center>
                     <bottom>
                         <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <buttons>
-                                <Button mnemonicParsing="false" text="excute" fx:id="excute" onAction="#excute"
-                                        disable="true"/>
-                                <Button mnemonicParsing="false" text="reload" fx:id="reload" onAction="#reload"/>
+                                <Button fx:id="excute" disable="true" mnemonicParsing="false" onAction="#excute"
+                                        text="excute"/>
+                                <Button fx:id="reload" mnemonicParsing="false" onAction="#reload" text="reload"/>
                             </buttons>
                         </ButtonBar>
                     </bottom>
@@ -43,4 +38,19 @@
             </center>
         </BorderPane>
     </left>
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+    <top>
+        <BorderPane prefHeight="44.0" prefWidth="1139.0" BorderPane.alignment="CENTER">
+            <right>
+                <Button fx:id="open" mnemonicParsing="false" onAction="#load" prefHeight="30.0" prefWidth="157.0"
+                        text="open" BorderPane.alignment="CENTER"/>
+            </right>
+            <center>
+                <TextField fx:id="url" prefHeight="30.0" prefWidth="978.0" text="http://www.baidu.com"
+                           BorderPane.alignment="CENTER"/>
+            </center>
+        </BorderPane>
+    </top>
 </BorderPane>
