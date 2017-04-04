@@ -49,6 +49,7 @@
             </right>
             <center>
                 <TextField fx:id="url" prefHeight="30.0" prefWidth="978.0" text="http://www.baidu.com"
+                           onKeyPressed="#onEnterKey"
                            BorderPane.alignment="CENTER"/>
             </center>
         </BorderPane>
